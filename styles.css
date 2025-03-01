@@ -408,7 +408,8 @@ footer {
   nav ul li {
     margin: 0;
   }
-  #menu-toggle:checked + .hamburger + nav ul {
+  /* Se usa el combinador general (~) para seleccionar el nav ul cuando el checkbox está activado */
+  #menu-toggle:checked ~ nav ul {
     transform: translateX(0);
   }
   /* Ajustes de hero */
