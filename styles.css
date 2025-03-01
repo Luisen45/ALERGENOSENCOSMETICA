@@ -1,19 +1,29 @@
-/* Reset básico */
+/* 
+  Reset y tipografía 
+*/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth; /* Desplazamiento suave en anclas */
+}
+
 body {
-  font-family: "Arial", sans-serif;
+  font-family: 'Poppins', sans-serif;
   background-color: #fdf0f6;
   color: #333;
 }
 
-/* Encabezado */
+/* 
+  Encabezado fijo (sticky) con menú hamburguesa 
+*/
 header {
-  position: relative;
+  position: sticky;
+  top: 0;
+  z-index: 999;
   background-color: #fff;
   display: flex;
   align-items: center;
@@ -24,7 +34,7 @@ header {
 
 .logo {
   font-size: 1.2rem;
-  font-weight: bold;
+  font-weight: 600;
   color: #ff5fa2;
 }
 
@@ -41,7 +51,6 @@ header {
   display: none;
 }
 
-/* Navegación principal */
 nav ul {
   list-style: none;
   display: flex;
@@ -51,7 +60,7 @@ nav ul {
 nav ul li a {
   text-decoration: none;
   color: #333;
-  font-weight: bold;
+  font-weight: 600;
   padding: 15px;
   transition: color 0.3s ease;
 }
@@ -60,43 +69,42 @@ nav ul li a:hover {
   color: #ff5fa2;
 }
 
-/* Hero con imagen de fondo */
+/* 
+  Sección Hero con parallax 
+*/
 .hero {
   width: 100%;
-  height: 70vh;
-  background: url("https://i.imgur.com/DPPAQMJ.jpg") no-repeat center center/cover;
+  height: 80vh;
+  background: 
+    linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+    url("https://i.imgur.com/DPPAQMJ.jpg") 
+    center center/cover no-repeat;
+  background-attachment: fixed; /* parallax */
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
-}
-
-.hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.3); /* Capa de oscurecimiento */
 }
 
 .hero-content {
-  position: relative;
   text-align: center;
   color: #fff;
-  z-index: 1;
 }
 
 .hero-content h1 {
   font-size: 3rem;
   margin-bottom: 10px;
+  font-weight: 600;
 }
 
 .hero-content .subtitle {
   font-size: 1.2rem;
   letter-spacing: 2px;
-  font-weight: 500;
+  font-weight: 400;
 }
 
-/* Contador de visitas */
+/* 
+  Contador de visitas 
+*/
 #contador {
   text-align: center;
   padding: 20px;
@@ -108,7 +116,9 @@ nav ul li a:hover {
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-/* Botones de interacción */
+/* 
+  Botones de interacción 
+*/
 #interacciones {
   display: flex;
   justify-content: center;
@@ -123,7 +133,11 @@ nav ul li a:hover {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+#interacciones button:hover {
+  transform: scale(1.05);
 }
 
 #likeBtn {
@@ -144,13 +158,24 @@ nav ul li a:hover {
   background: #ffa3c2;
 }
 
-/* Sección de Investigación */
+/* 
+  Sección de Investigación con parallax 
+*/
 #investigacion {
-  background-color: #fff;
+  position: relative;
+  min-height: 60vh;
+  background: 
+    linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)), 
+    url("https://imgur.com/a/iDMamd2") 
+    center center/cover no-repeat;
+  background-attachment: fixed; /* Parallax */
   margin: 20px auto;
-  max-width: 1200px;
-  border-radius: 10px;
-  padding: 20px;
+}
+
+#investigacion .overlay {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 #investigacion h2 {
@@ -158,28 +183,20 @@ nav ul li a:hover {
   margin-bottom: 20px;
   text-align: center;
   font-size: 2rem;
+  font-weight: 600;
 }
 
 .investigacion-content {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  align-items: center;
-  justify-content: center;
-}
-
-.investigacion-content img {
-  max-width: 400px;
-  width: 100%;
+  background-color: #fff;
+  padding: 20px;
   border-radius: 10px;
-}
-
-.investigacion-content div {
-  max-width: 600px;
   text-align: justify;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-/* Sección de Video */
+/* 
+  Sección de Video 
+*/
 #video {
   background-color: #fff;
   margin: 20px auto;
@@ -193,11 +210,12 @@ nav ul li a:hover {
   margin-bottom: 20px;
   text-align: center;
   font-size: 2rem;
+  font-weight: 600;
 }
 
 .video-container {
   position: relative;
-  padding-bottom: 56.25%; /* Relación de aspecto 16:9 */
+  padding-bottom: 56.25%; /* 16:9 */
   height: 0;
 }
 
@@ -208,7 +226,9 @@ nav ul li a:hover {
   border-radius: 8px;
 }
 
-/* Sección de Comentarios */
+/* 
+  Sección de Comentarios 
+*/
 #comentarios {
   background-color: #fff;
   margin: 20px auto;
@@ -221,6 +241,7 @@ nav ul li a:hover {
   color: #ff5fa2;
   margin-bottom: 20px;
   text-align: center;
+  font-weight: 600;
 }
 
 #commentSection {
@@ -252,14 +273,17 @@ nav ul li a:hover {
   background: #ff5fa2;
   color: #fff;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: transform 0.2s ease, background 0.3s ease;
 }
 
 #comentarios button:hover {
   background: #ff80ab;
+  transform: scale(1.05);
 }
 
-/* Sección de Contacto */
+/* 
+  Sección de Contacto 
+*/
 #contacto {
   background-color: #fff;
   margin: 20px auto;
@@ -272,12 +296,13 @@ nav ul li a:hover {
   color: #ff5fa2;
   margin-bottom: 20px;
   text-align: center;
+  font-weight: 600;
 }
 
 form label {
   display: block;
   margin-top: 10px;
-  font-weight: bold;
+  font-weight: 500;
 }
 
 form input[type="text"],
@@ -288,6 +313,7 @@ form textarea {
   margin-top: 5px;
   border-radius: 5px;
   border: 1px solid #ccc;
+  font-family: 'Poppins', sans-serif;
 }
 
 form button[type="submit"] {
@@ -298,14 +324,49 @@ form button[type="submit"] {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: transform 0.2s ease, background 0.3s ease;
+  font-weight: 500;
 }
 
 form button[type="submit"]:hover {
   background: #ff80ab;
+  transform: scale(1.05);
 }
 
-/* Footer */
+/* 
+  Botón "Back to Top" 
+*/
+#backToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #ff5fa2;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: none; /* Se mostrará con JS */
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, background 0.3s ease;
+  z-index: 999;
+}
+
+#backToTop:hover {
+  background: #ff80ab;
+  transform: scale(1.05);
+}
+
+#backToTop.show {
+  display: flex;
+}
+
+/* 
+  Footer 
+*/
 footer {
   text-align: center;
   margin: 20px auto;
@@ -313,7 +374,23 @@ footer {
   font-size: 0.9rem;
 }
 
-/* Responsividad */
+/* 
+  Animación de aparición al hacer scroll (fade-in) 
+*/
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 
+  Responsividad para pantallas pequeñas 
+*/
 @media (max-width: 768px) {
   .hamburger {
     display: block;
@@ -334,10 +411,15 @@ footer {
   #menu-toggle:checked + .hamburger + nav ul {
     transform: translateX(0);
   }
-  .investigacion-content {
-    flex-direction: column;
+  /* Ajustes de hero */
+  .hero {
+    background-attachment: scroll; /* Para evitar problemas en mobile */
   }
   .hero-content h1 {
     font-size: 2rem;
+  }
+  /* Ajustes de secciones con parallax */
+  #investigacion {
+    background-attachment: scroll;
   }
 }
