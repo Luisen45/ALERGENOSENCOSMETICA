@@ -11,7 +11,7 @@ body {
   color: #333;
 }
 
-/* Estilos de cabecera */
+/* Encabezado */
 header {
   position: relative;
   background-color: #fff;
@@ -22,14 +22,13 @@ header {
   border-bottom: 2px solid #ffb8d2;
 }
 
-/* Logo o título */
 .logo {
   font-size: 1.2rem;
   font-weight: bold;
   color: #ff5fa2;
 }
 
-/* Menú hamburguesa para dispositivos móviles */
+/* Menú hamburguesa para móviles */
 .hamburger {
   font-size: 1.5rem;
   color: #333;
@@ -38,7 +37,6 @@ header {
   margin-left: auto;
 }
 
-/* Checkbox para controlar el menú */
 #menu-toggle {
   display: none;
 }
@@ -62,7 +60,7 @@ nav ul li a:hover {
   color: #ff5fa2;
 }
 
-/* Sección Hero con imagen de fondo */
+/* Hero con imagen de fondo */
 .hero {
   width: 100%;
   height: 70vh;
@@ -315,7 +313,7 @@ footer {
   font-size: 0.9rem;
 }
 
-/* Adaptaciones responsive */
+/* Responsividad */
 @media (max-width: 768px) {
   .hamburger {
     display: block;
