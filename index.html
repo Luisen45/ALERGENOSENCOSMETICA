@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog Informativo: Alérgenos en Cosméticos</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Alérgenos en Cosméticos</h1>
+    <nav>
+      <ul>
+        <li><a href="#investigacion">Investigación</a></li>
+        <li><a href="#video">Video</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <!-- Contador de Visitas -->
+  <section id="contador">
+    <p>Visitas: <span id="visitCounter">0</span></p>
+  </section>
+
+  <!-- Botones de Interacción -->
+  <section id="interacciones">
+    <button id="likeBtn">Like (<span id="likeCount">0</span>)</button>
+    <button id="dislikeBtn">Dislike (<span id="dislikeCount">0</span>)</button>
+  </section>
+
+  <!-- Sección de Investigación -->
+  <section id="investigacion">
+    <h2>Investigación sobre Alérgenos en Cosméticos</h2>
+    <p>Aquí encontrarás toda la información relevante, estudios y análisis sobre los alérgenos en productos cosméticos. Puedes ampliar esta sección con artículos, imágenes y enlaces a fuentes confiables.</p>
+    <!-- Agrega más contenido según necesites -->
+  </section>
+
+  <!-- Sección de Video -->
+  <section id="video">
+    <h2>Video Informativo</h2>
+    <div class="video-container">
+      <!-- Reemplaza VIDEO_ID con el ID real del video en Google Drive -->
+      <iframe src="https://drive.google.com/file/d/VIDEO_ID/preview" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <!-- Sección de Comentarios -->
+  <section id="comentarios">
+    <h2>Comentarios</h2>
+    <div id="commentSection">
+      <!-- Los comentarios se agregarán aquí -->
+    </div>
+    <textarea id="commentInput" placeholder="Escribe tu comentario aquí..."></textarea>
+    <button id="submitComment">Agregar Comentario</button>
+  </section>
+
+  <!-- Sección de Contacto -->
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <form id="contactForm">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required>
+      
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      
+      <label for="mensaje">Mensaje:</label>
+      <textarea id="mensaje" name="mensaje" required></textarea>
+      
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Blog de Alérgenos en Cosméticos</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
