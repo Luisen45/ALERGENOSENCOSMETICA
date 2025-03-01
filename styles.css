@@ -1,4 +1,4 @@
-/* Reset y configuración básica */
+/* Reset básico */
 * {
   margin: 0;
   padding: 0;
@@ -6,61 +6,117 @@
 }
 
 body {
-  font-family: 'Arial', sans-serif;
-  line-height: 1.6;
-  background: #f4f4f4;
+  font-family: "Arial", sans-serif;
+  background-color: #fdf0f6;
   color: #333;
-  padding: 20px;
 }
 
-/* Encabezado y navegación */
+/* Estilos de cabecera */
 header {
-  background: #333;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
+  position: relative;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  height: 60px;
+  border-bottom: 2px solid #ffb8d2;
 }
 
-header h1 {
-  margin-bottom: 10px;
+/* Logo o título */
+.logo {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ff5fa2;
 }
 
+/* Menú hamburguesa para dispositivos móviles */
+.hamburger {
+  font-size: 1.5rem;
+  color: #333;
+  display: none;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+/* Checkbox para controlar el menú */
+#menu-toggle {
+  display: none;
+}
+
+/* Navegación principal */
 nav ul {
   list-style: none;
   display: flex;
-  justify-content: center;
-}
-
-nav ul li {
-  margin: 0 15px;
+  margin-left: auto;
 }
 
 nav ul li a {
-  color: #fff;
   text-decoration: none;
+  color: #333;
   font-weight: bold;
+  padding: 15px;
+  transition: color 0.3s ease;
 }
 
-/* Secciones generales */
-section {
-  margin: 20px 0;
-  background: #fff;
+nav ul li a:hover {
+  color: #ff5fa2;
+}
+
+/* Sección Hero con imagen de fondo */
+.hero {
+  width: 100%;
+  height: 70vh;
+  background: url("https://i.imgur.com/DPPAQMJ.jpg") no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3); /* Capa de oscurecimiento */
+}
+
+.hero-content {
+  position: relative;
+  text-align: center;
+  color: #fff;
+  z-index: 1;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.hero-content .subtitle {
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  font-weight: 500;
+}
+
+/* Contador de visitas */
+#contador {
+  text-align: center;
   padding: 20px;
-  border-radius: 8px;
+  font-size: 1.2em;
+  background-color: #fff;
+  margin: 20px auto;
+  max-width: 600px;
+  border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-/* Contador y botones de interacción */
-#contador {
-  text-align: center;
-  font-size: 1.2em;
-}
-
+/* Botones de interacción */
 #interacciones {
   display: flex;
   justify-content: center;
   gap: 20px;
-  margin-bottom: 20px;
+  margin: 20px auto;
+  max-width: 600px;
 }
 
 #interacciones button {
@@ -73,63 +129,100 @@ section {
 }
 
 #likeBtn {
-  background: #4caf50;
+  background: #ff80ab;
   color: #fff;
 }
 
 #likeBtn:hover {
-  background: #45a049;
+  background: #ff5fa2;
 }
 
 #dislikeBtn {
-  background: #f44336;
-  color: #fff;
+  background: #ffb8d2;
+  color: #333;
 }
 
 #dislikeBtn:hover {
-  background: #e53935;
+  background: #ffa3c2;
 }
 
-/* Video */
+/* Sección de Investigación */
+#investigacion {
+  background-color: #fff;
+  margin: 20px auto;
+  max-width: 1200px;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+#investigacion h2 {
+  color: #ff5fa2;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.investigacion-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.investigacion-content img {
+  max-width: 400px;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.investigacion-content div {
+  max-width: 600px;
+  text-align: justify;
+}
+
+/* Sección de Video */
+#video {
+  background-color: #fff;
+  margin: 20px auto;
+  max-width: 1000px;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+#video h2 {
+  color: #ff5fa2;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 2rem;
+}
+
 .video-container {
   position: relative;
-  padding-bottom: 56.25%; /* 16:9 */
-  padding-top: 25px;
+  padding-bottom: 56.25%; /* Relación de aspecto 16:9 */
   height: 0;
 }
 
 .video-container iframe {
   position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   border-radius: 8px;
 }
 
-/* Comentarios */
-#comentarios textarea {
-  width: 100%;
-  height: 80px;
-  margin-bottom: 10px;
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  resize: vertical;
+/* Sección de Comentarios */
+#comentarios {
+  background-color: #fff;
+  margin: 20px auto;
+  max-width: 800px;
+  border-radius: 10px;
+  padding: 20px;
 }
 
-#comentarios button {
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  background: #333;
-  color: #fff;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-#comentarios button:hover {
-  background: #555;
+#comentarios h2 {
+  color: #ff5fa2;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 #commentSection {
@@ -144,10 +237,49 @@ section {
   margin-bottom: 10px;
 }
 
-/* Formulario de contacto */
+#comentarios textarea {
+  width: 100%;
+  height: 80px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  resize: vertical;
+}
+
+#comentarios button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background: #ff5fa2;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#comentarios button:hover {
+  background: #ff80ab;
+}
+
+/* Sección de Contacto */
+#contacto {
+  background-color: #fff;
+  margin: 20px auto;
+  max-width: 600px;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+#contacto h2 {
+  color: #ff5fa2;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
 form label {
   display: block;
   margin-top: 10px;
+  font-weight: bold;
 }
 
 form input[type="text"],
@@ -161,9 +293,9 @@ form textarea {
 }
 
 form button[type="submit"] {
-  margin-top: 10px;
+  margin-top: 15px;
   padding: 10px 20px;
-  background: #333;
+  background: #ff5fa2;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -172,13 +304,42 @@ form button[type="submit"] {
 }
 
 form button[type="submit"]:hover {
-  background: #555;
+  background: #ff80ab;
 }
 
-/* Pie de página */
+/* Footer */
 footer {
   text-align: center;
-  margin-top: 20px;
-  font-size: 0.9em;
+  margin: 20px auto;
   color: #777;
+  font-size: 0.9rem;
+}
+
+/* Adaptaciones responsive */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+  nav ul {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #fff;
+    width: 200px;
+    flex-direction: column;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+  }
+  nav ul li {
+    margin: 0;
+  }
+  #menu-toggle:checked + .hamburger + nav ul {
+    transform: translateX(0);
+  }
+  .investigacion-content {
+    flex-direction: column;
+  }
+  .hero-content h1 {
+    font-size: 2rem;
+  }
 }
