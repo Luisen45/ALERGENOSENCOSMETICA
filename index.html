@@ -4,10 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Blog Informativo: Alérgenos en Cosméticos</title>
+  <!-- Fuente Google (Poppins) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" 
+    rel="stylesheet">
+  <!-- Hoja de estilos principal -->
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- Header con menú hamburguesa -->
+  <!-- Encabezado con menú hamburguesa -->
   <header>
     <div class="logo">Alérgenos en Cosmética</div>
     <input type="checkbox" id="menu-toggle" />
@@ -21,35 +28,30 @@
     </nav>
   </header>
 
-  <!-- Sección Hero con imagen de fondo -->
+  <!-- Sección Hero con fondo parallax -->
   <section class="hero">
-    <div class="hero-content">
+    <div class="hero-content fade-in">
       <h1>ALÉRGENOS EN COSMÉTICA</h1>
       <p class="subtitle">FESZ. QFB.</p>
     </div>
   </section>
 
-  <!-- Contador de visitas -->
-  <section id="contador">
+  <!-- Contador de visitas (fade-in) -->
+  <section id="contador" class="fade-in">
     <p>Visitas: <span id="visitCounter">0</span></p>
   </section>
 
-  <!-- Botones de interacción -->
-  <section id="interacciones">
+  <!-- Botones de interacción (fade-in) -->
+  <section id="interacciones" class="fade-in">
     <button id="likeBtn">Like (<span id="likeCount">0</span>)</button>
     <button id="dislikeBtn">Dislike (<span id="dislikeCount">0</span>)</button>
   </section>
 
-  <!-- Sección de Investigación -->
-  <section id="investigacion">
-    <h2>ALÉRGENOS COMUNES</h2>
-    <div class="investigacion-content">
-      <!-- Sustituye esta URL por una imagen directa (.jpg, .png) si lo deseas -->
-      <img 
-        src="https://i.imgur.com/DPPAQMJ.jpg" 
-        alt="Alérgenos Comunes" 
-      />
-      <div>
+  <!-- Sección de Investigación con parallax -->
+  <section id="investigacion" class="fade-in">
+    <div class="overlay">
+      <h2>ALÉRGENOS COMUNES</h2>
+      <div class="investigacion-content">
         <p>
           Los cosméticos pueden contener alérgenos que desencadenan reacciones
           adversas en la piel, especialmente en personas sensibles. Entre los
@@ -72,8 +74,8 @@
     </div>
   </section>
 
-  <!-- Sección de Video -->
-  <section id="video">
+  <!-- Sección de Video (fade-in) -->
+  <section id="video" class="fade-in">
     <h2>VIDEO INFORMATIVO</h2>
     <div class="video-container">
       <!-- Reemplaza VIDEO_ID con el ID real del video en Google Drive -->
@@ -86,18 +88,18 @@
     </div>
   </section>
 
-  <!-- Sección de Comentarios -->
-  <section id="comentarios">
+  <!-- Sección de Comentarios (fade-in) -->
+  <section id="comentarios" class="fade-in">
     <h2>COMENTARIOS</h2>
     <div id="commentSection">
-      <!-- Aquí se agregarán los comentarios dinámicamente -->
+      <!-- Comentarios dinámicos -->
     </div>
     <textarea id="commentInput" placeholder="Escribe tu comentario aquí..."></textarea>
     <button id="submitComment">Agregar Comentario</button>
   </section>
 
-  <!-- Sección de Contacto -->
-  <section id="contacto">
+  <!-- Sección de Contacto (fade-in) -->
+  <section id="contacto" class="fade-in">
     <h2>CONTACTO</h2>
     <form id="contactForm">
       <label for="nombre">Nombre:</label>
@@ -112,6 +114,9 @@
       <button type="submit">Enviar</button>
     </form>
   </section>
+
+  <!-- Botón "Back to Top" -->
+  <button id="backToTop">↑</button>
 
   <footer>
     <p>&copy; 2025 Blog de Alérgenos en Cosméticos</p>
