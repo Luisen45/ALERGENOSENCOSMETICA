@@ -1,29 +1,40 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Blog Informativo: Alérgenos en Cosméticos</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <!-- Header con menú hamburguesa -->
   <header>
-    <h1>Alérgenos en Cosméticos</h1>
+    <div class="logo">Alérgenos en Cosmética</div>
+    <input type="checkbox" id="menu-toggle" />
+    <label for="menu-toggle" class="hamburger">&#9776;</label>
     <nav>
       <ul>
-        <li><a href="#investigacion">Investigación</a></li>
         <li><a href="#video">Video</a></li>
+        <li><a href="#investigacion">Investigación</a></li>
         <li><a href="#contacto">Contacto</a></li>
       </ul>
     </nav>
   </header>
-  
-  <!-- Contador de Visitas -->
+
+  <!-- Sección Hero -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>ALÉRGENOS EN COSMÉTICA</h1>
+      <p class="subtitle">FESZ. QFB.</p>
+    </div>
+  </section>
+
+  <!-- Contador de visitas -->
   <section id="contador">
     <p>Visitas: <span id="visitCounter">0</span></p>
   </section>
 
-  <!-- Botones de Interacción -->
+  <!-- Botones de interacción -->
   <section id="interacciones">
     <button id="likeBtn">Like (<span id="likeCount">0</span>)</button>
     <button id="dislikeBtn">Dislike (<span id="dislikeCount">0</span>)</button>
@@ -31,25 +42,52 @@
 
   <!-- Sección de Investigación -->
   <section id="investigacion">
-    <h2>Investigación sobre Alérgenos en Cosméticos</h2>
-    <p>Aquí encontrarás toda la información relevante, estudios y análisis sobre los alérgenos en productos cosméticos. Puedes ampliar esta sección con artículos, imágenes y enlaces a fuentes confiables.</p>
-    <!-- Agrega más contenido según necesites -->
+    <h2>ALÉRGENOS COMUNES</h2>
+    <div class="investigacion-content">
+      <!-- Ajusta la URL a la imagen directa si la tienes; por ahora se usa el enlace al álbum. -->
+      <img src="https://imgur.com/a/iDMamd2" alt="Alérgenos Comunes" />
+      <div>
+        <p>
+          Los cosméticos pueden contener alérgenos que desencadenan reacciones
+          adversas en la piel, especialmente en personas sensibles. Entre los
+          más comunes se encuentran fragancias, conservantes como parabenos y
+          metilisotiazolinona, colorantes, metales pesados (níquel y cobalto) y
+          ciertos aceites esenciales. Es importante revisar los ingredientes de
+          los productos, buscar formulaciones hipoalergénicas y sin fragancias.
+          Conocer la composición de los cosméticos y optar por productos
+          adecuados a cada tipo de piel es fundamental para la salud cutánea.
+        </p>
+        <p>
+          <strong>Normatividad Internacional vs Normatividad Nacional:</strong><br/>
+          Dependiendo de la región o país, los reguladores exigen que ciertos
+          alérgenos se declaren en el etiquetado, con el fin de proteger al
+          consumidor. Es vital comparar las normas locales con las internacionales
+          para garantizar la seguridad y transparencia de los ingredientes en
+          los productos cosméticos.
+        </p>
+      </div>
+    </div>
   </section>
 
   <!-- Sección de Video -->
   <section id="video">
-    <h2>Video Informativo</h2>
+    <h2>VIDEO INFORMATIVO</h2>
     <div class="video-container">
       <!-- Reemplaza VIDEO_ID con el ID real del video en Google Drive -->
-      <iframe src="https://drive.google.com/file/d/VIDEO_ID/preview" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <iframe
+        src="https://drive.google.com/file/d/VIDEO_ID/preview"
+        frameborder="0"
+        allow="autoplay; encrypted-media"
+        allowfullscreen>
+      </iframe>
     </div>
   </section>
 
   <!-- Sección de Comentarios -->
   <section id="comentarios">
-    <h2>Comentarios</h2>
+    <h2>COMENTARIOS</h2>
     <div id="commentSection">
-      <!-- Los comentarios se agregarán aquí -->
+      <!-- Aquí se agregarán los comentarios dinámicamente -->
     </div>
     <textarea id="commentInput" placeholder="Escribe tu comentario aquí..."></textarea>
     <button id="submitComment">Agregar Comentario</button>
@@ -57,17 +95,17 @@
 
   <!-- Sección de Contacto -->
   <section id="contacto">
-    <h2>Contacto</h2>
+    <h2>CONTACTO</h2>
     <form id="contactForm">
       <label for="nombre">Nombre:</label>
-      <input type="text" id="nombre" name="nombre" required>
-      
+      <input type="text" id="nombre" name="nombre" required />
+
       <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
-      
+      <input type="email" id="email" name="email" required />
+
       <label for="mensaje">Mensaje:</label>
       <textarea id="mensaje" name="mensaje" required></textarea>
-      
+
       <button type="submit">Enviar</button>
     </form>
   </section>
